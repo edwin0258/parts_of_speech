@@ -1,0 +1,435 @@
+body {
+	background-attachment: fixed;
+	background-image: linear-gradient(white,rgba(255,255,255,.6)), url(./images/background.jpg);
+}
+ 
+.container {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: 700px;
+	justify-content: center;
+	align-items: center;
+ }
+ 
+.containerHeader {display: flex;}
+ 
+.points,
+.help,
+.badges {
+	border-radius: 4px 4px 0px 0px;
+	box-shadow: inset 4px 4px 2px rgba(255, 255, 255, 0.2), inset -2px -5px 10px rgba(20, 20, 20, 0.3), 2px 2px 3px rgba(0, 0, 0, 0.3);
+	color: white;
+	font-family: monospace;
+	font-weight: 800;
+	height: 30px;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+ }
+ 
+.points {
+	background: #E71D36;
+	line-height: 30px;
+	text-indent: 10px;
+	width: 150px;
+ }
+ 
+.help {
+	background: #2EC4B6;
+	cursor: pointer;
+	margin-left: 10px;
+	width: 75px;
+ }
+ 
+.badges {
+	background: #FFA630;
+	cursor: pointer;
+	margin-left: 10px;
+	width: 75px;
+ }
+ 
+.unearned {
+	cursor: not-allowed;
+	opacity: .2;
+ }
+ 
+.mainCard {
+	background: rgba(240, 240, 240, 0.3);
+	border-radius: 2px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	height: 300px;
+	width: 700px;
+ }
+ 
+.mainPage {
+	border-radius: 2px;
+	display: flex;
+	flex-flow: column wrap;
+	height: 100%;
+	position: relative;
+ }
+ 
+.helpPage,
+.badgePage {
+	height: 100%;
+	overflow-y: auto;
+ }
+ 
+.badgePage {
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	position: relative;
+ }
+ 
+.badgePage > h3 {
+	left: 5px;
+	position: absolute;
+	top: 5px;
+ }
+
+.badgePage > img {height: 100px;}
+ 
+.helpContent {display: flex;}
+ 
+.currentPOS {
+	font-family: monospace;
+	left: 10px;
+	position: absolute;
+	top: 10px;
+ }
+ 
+.loadingSentence {
+	align-items: center;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+ }
+ 
+.loadingSentence > p {
+	font-family: sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	z-index: 2;
+ }
+ 
+.loadingOpacScreen {
+	background: white;
+	height: inherit;
+	opacity: .4;
+	position: inherit;
+	width: inherit;
+	z-index: 1;
+ }
+ 
+.sentence {
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	box-sizing: border-box;
+	flex: 1;
+	font-family: monospace;
+	font-size: 20px;
+	overflow-y: scroll;
+	padding: 20px;
+	user-select: none;
+ }
+ 
+.mainFooter {
+	align-items: center;
+	display: flex;
+	height: 50px;
+ }
+ 
+.colors {
+	flex: 2;
+	margin-left: 5px;
+ }
+ 
+.colorBtn, .colorTip {
+	border: none;
+	box-shadow: inset 1px 2px rgba(255, 255, 255, 0.4), inset -1px -1px 4px rgba(0, 0, 0, 0.2);
+	height: 20px;
+	margin: 5px;
+	width: 20px;
+ }
+ 
+.colorTip {margin: 0 auto;}
+ 
+.containerFooter {
+	animation: fadeIn 2s forwards;
+	opacity: 0;
+ }
+ 
+.hidden {display: none;}
+ 
+.firstTimeHidden {display: none;}
+ 
+.correctBar {display: flex;}
+ 
+.correctBar,
+.correct,
+.incorrect {
+	box-shadow: 0px 2px 2px rgba(0,0,0,.2);
+	height: 5px;
+ }
+ 
+.correct {
+	background: #08A045;
+	transition: 2s width;
+ }
+ 
+.incorrect {
+	background: #E71D36;
+	transition: 2s width;
+ }
+ 
+.colorKey {
+	min-width: 200px;
+	text-align: center;
+ }
+ 
+.keyHeader {text-align: center;}
+ 
+table {
+	font-family: monospace;
+	width: 200px;
+ }
+ 
+table td {
+	font-family: 'Inconsolata', monospace;
+	text-align: center;
+ }
+ 
+.directions {
+	box-sizing: border-box;
+	flex: 1;
+	font-family: 'Inconsolata', monospace;
+	height: 200px;
+	line-height: 25px;
+ }
+ 
+.header {
+	font-family: monospace;
+	font-size: 16px;
+	line-height: 25px;
+ }
+ 
+.person {
+	flex: 1;
+	font-family: monospace;
+	text-align: center;
+ }
+ 
+.solve,
+.next {
+	border-radius: 2px;
+	border: 1px solid #1b7169;
+	color: white;
+	cursor: pointer;
+	font-family: 'Inconsolata', monospace;
+	font-weight: 800;
+	height: 25px;
+	margin-right: 10px;
+	text-shadow: 1px 1px 2px gray;
+ }
+ 
+.solve {background: #2EC4B6;}
+ 
+.solve:disabled,
+.next:disabled {
+	cursor: not-allowed;
+	opacity: .5;
+ }
+ 
+.next {background: #08A045;}
+ 
+.colorBtn {
+	border-radius: 2px;
+	cursor: pointer;
+	position: relative;
+ }
+ 
+ .colorBtn:focus {
+   outline: none;
+ }
+ 
+.nounBtn {
+	background: #2EC4B6;
+	border: 1px solid #1b7169;
+ }
+ 
+.verbBtn {
+	background: #011627;
+	border: 1px solid black;
+ }
+ 
+.adverbBtn {
+	background: #FFA630;
+	border: 1px solid #b56800;
+ }
+ 
+.pronounBtn {
+	background: #04E762;
+	border: 1px solid #028337;
+ }
+ 
+.adjBtn {
+	background: #E71D36;
+	border: 1px solid #8f0f1f;
+ }
+ 
+.prepBtn {
+	background: #8F2D56;
+	border: 1px solid #411527;
+ }
+ 
+.determinerBtn {
+	background: #08A045;
+	border: 1px solid #033f1b;
+ }
+ 
+.conjBtn {
+	background: #F6F930;
+	border: 1px solid #bbbe05;
+ }
+ 
+.modalBtn {
+	background: #E09F7D;
+	border: 1px solid #c76430;
+ }
+ 
+.intBtn {
+	background: #FF6B6B;
+	border: 1px solid #ff0505;
+ }
+ 
+.selectedBtn:before {
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 1px;
+	box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.3), inset -1px -1px 3px rgba(255, 255, 255, 0.2);
+	content: "";
+	height: 12px;
+	left: calc(50% - 6px);
+	position: absolute;
+	top: calc(50% - 6px);
+	width: 12px;
+ }
+ 
+.word {
+	cursor: pointer;
+	float: left;
+	height: 23px;
+	margin: 7px;
+	position: relative;
+ }
+ 
+.word:before {
+	border-bottom-color: #444;
+	border-bottom-style: solid;
+	border-bottom-width: 5px;
+	content: "";
+	height: 100%;
+	position: absolute;
+	transition: .4s width;
+	width: 0px;
+ }
+ 
+.underline:before {
+	border-bottom-style: solid;
+	border-bottom-width: 6px;
+	box-shadow: 0px 2px 0px rgba(0,0,0,.2);
+	content: "";
+	height: 100%;
+	position: absolute;
+	transition: .4s width;
+ }
+ 
+.colorTip {border-radius: 2px;}
+ 
+.noun:before {
+	border-bottom-color: #2EC4B6;
+	box-shadow: 0px 2px 0px rgba(46, 196, 182, 0.4);
+	width: 100%;
+ }
+ 
+.verb:before {
+	border-bottom-color: #011627;
+	box-shadow: 0px 2px rgba(0,0,0,.2);
+	width: 100%;
+ }
+ 
+.adjective:before {
+	border-bottom-color: #E71D36;
+	box-shadow: 0px 2px rgba(231, 29, 54, 0.4);
+	width: 100%;
+ }
+ 
+.pronoun:before {
+	border-bottom-color: #04E762;
+	box-shadow: 0px 2px rgba(4, 231, 98, 0.4);
+	width: 100%;
+ }
+ 
+.adverb:before {
+	border-bottom-color: #FFA630;
+	box-shadow: 0px 2px rgba(255, 159, 28, 0.4);
+	width: 100%;
+ }
+ 
+.preposition:before {
+	border-bottom-color: #8F2D56;
+	box-shadow: 0px 2px rgba(143, 45, 86, 0.4);
+	width: 100%;
+ }
+ 
+.determiner:before {
+	border-bottom-color: #08A045;
+	box-shadow: 0px 2px rgba(8, 160, 69, 0.4);
+	width: 100%;
+ }
+ 
+.conjunction:before {
+	border-bottom-color: #F6F930;
+	box-shadow: 0px 2px rgba(246, 249, 48, 0.4);
+	width: 100%;
+ }
+ 
+.modal:before {
+	border-bottom-color: #E09F7D;
+	box-shadow: 0px 2px rgba(224, 159, 125, 0.4);
+	width: 100%;
+ }
+ 
+.interjection:before {
+	border-bottom-color: #FF6B6B;
+	box-shadow: 0px 2px rgba(255, 107, 107, 0.4);
+	width: 100%;
+ }
+ 
+.other:before {
+	border-bottom-color: #D2F898;
+	box-shadow: 0px 2px rgba(210, 248, 152, 0.2);
+	width: 100%;
+ }
+ 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

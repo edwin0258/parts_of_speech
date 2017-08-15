@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"/>
+
+    <link href="./styling.css" rel="stylesheet"/>
+    <meta name="author" content="Devin Miller"/>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="containerHeader">
+        <div class="points">
+        Points: <span class="pointsAmount"></span>
+        </div>
+        <button class="help">Help</button>
+        <button class="badges">Badges</button>
+      </div>
+      <div class="mainCard">
+        <div class="mainPage">
+          <div class="currentPOS" title="Current part of speech selected">
+          </div>
+          <div class="sentence">
+            
+          </div>
+          <div class="loadingSentence">
+            <div class="loadingOpacScreen">
+              
+            </div>
+            <p>Loading</p>
+          </div>
+          <div class="correctBar">
+            <div class="correct" title="Percent correct"></div>
+            <div class="incorrect" title="Percent incorrect"></div>
+          </div>
+          <div class="mainFooter">
+            <div class="colors">
+              <button title="Noun" class="colorBtn nounBtn selectedBtn"></button>
+              <button title="Verb" class="colorBtn verbBtn"></button>
+              <button title="Adjective" class="colorBtn adjBtn"></button>
+              <button title="pronoun" class="colorBtn pronounBtn"></button>
+              <button title="Adverb" class="colorBtn adverbBtn"></button>
+              <button title="Preposition" class="colorBtn prepBtn"></button>
+              <button title="Determiner" class="colorBtn determinerBtn"></button>
+              <button title="Conjunction" class="colorBtn conjBtn"></button>
+              <button title="Modal" class="colorBtn modalBtn"></button>
+              <button title="Interjection" class="colorBtn intBtn"></button>
+            </div>
+            <div class="person">Author</div>
+            <button class="next">Next</button>
+            <button class="solve">Solve</button>
+          </div>
+        </div>
+        
+        <div class="helpPage hidden">
+          <div class="helpContent">
+            <div class="colorKey">
+              <h3 class="header keyHeader">Color Key</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Color</th>
+                    <th>Part of Speech</th>
+                  </tr>
+                </thead>
+                <tbody id="colorKeyBody">
+                </tbody>
+              </table>
+            </div>
+            <div class="directions">
+              <h3 class="header">Directions</h3>
+              <p>Click on a color and then a word in the sentence to tag the word as that part of speech. Press the solve button when done tagging.</p>
+            </div>
+          </div>
+        </div>
+        <div class="badgePage hidden">
+        <h3 class="header">Badges</h3>
+          <img title="earn 50 points" alt="50 points badge" class="unearned" src="images/Badge50.png"/>
+          <img title="earn 100 points" alt="100 points badge" class="unearned" src="images/Badge100.png"/>
+          <img title="earn 250 points" alt="250 points badge" class="unearned" src="images/Badge250.png"/>
+          <img title="earn 500 points" alt="500 points badge" class="unearned" src="images/Badge500.png"/>
+          <img title="earn 1000 points" alt="1000 points badge" class="unearned" src="images/Badge1000.png"/>
+          <img title="earn 10000 points" alt="10000 points badge" class="unearned" src="images/Badge10000.png"/>
+        </div>
+      </div>
+      
+    </div>
+    <script src="./bundle.js" type="text/javascript"></script>
+  </body>
+</html>
